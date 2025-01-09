@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coup Rules (Regular Deck Version)</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 20px;
+            background-color: #f9f9f9;
+        }
+        h1, h2 {
+            color: #333;
+        }
+        ul {
+            padding-left: 20px;
+        }
+        .card-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        .card-table th, .card-table td {
+            border: 1px solid #ddd;
+            padding: 8px;
+            text-align: center;
+        }
+        .card-table th {
+            background-color: #007BFF;
+            color: white;
+        }
+        table {
+            margin: 20px auto;
+            border-collapse: collapse;
+            width: 80%;
+        }
+        th, td {
+            border: 1px solid #ddd;
+            padding: 10px;
+            text-align: center;
+        }
+        th {
+            background-color: #007BFF;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <h1>Coup Rules (Regular Deck Version)</h1>
+    <p>
+        Coup is a game of bluffing, deduction, and strategy. This version uses a regular deck of cards, 
+        replacing the original characters with playing cards as outlined in the reference card.
+    </p>
+
+    <h2>Setup</h2>
+    <ul>
+        <li>Remove all cards except the ones listed in the reference card table. There are 3 copies of each card for a total of 15 cards in the deck.</li>
+        <li>Shuffle the deck and deal 2 cards to each player. These are their influence cards and should be kept face down.</li>
+        <li>Each player starts with 2 coins. The remaining coins form the "Bank."</li>
+        <li>Place the deck face down in the center to form the draw pile.</li>
+    </ul>
+
+    <h2>Objective</h2>
+    <p>
+        Be the last player standing by eliminating all other players’ influence cards.
+    </p>
+
+    <h2>Gameplay</h2>
+    <ul>
+        <li>On your turn, take one of the following actions:
+            <ul>
+                <li><b>Income:</b> Take 1 coin from the Bank.</li>
+                <li><b>Foreign Aid:</b> Take 2 coins from the Bank (can be blocked by "4").</li>
+                <li><b>Coup:</b> Pay 7 coins to force a player to lose one influence. (If you have 10 coins, you must Coup.)</li>
+                <li><b>Character Action:</b> Use the action of a card in your hand or bluff by pretending to have it. See the reference card for actions.</li>
+            </ul>
+        </li>
+        <li>If a player challenges your action, reveal the relevant card. If you can’t, you lose one influence.</li>
+        <li>Discard revealed cards face up and draw replacements as necessary.</li>
+    </ul>
+
+    <h2>End of the Game</h2>
+    <p>
+        The game ends when only one player has influence cards remaining.
+    </p>
+
+    <h2>Reference Card</h2>
+    <table>
+        <tr>
+            <th>Card</th>
+            <th>Action (Cost)</th>
+            <th>Counter</th>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Take 1 Coin from Bank</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Take 2 Coins from Bank</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>-</td>
+            <td>Coup (7 Coins)</td>
+            <td>If you have 10 coins, you must Coup</td>
+        </tr>
+        <tr>
+            <td>Ace</td>
+            <td>Assassinate (3 Coins)</td>
+            <td>-</td>
+        </tr>
+        <tr>
+            <td>King</td>
+            <td>Steal 2 Coins from a Player</td>
+            <td>Block "Steal 2 Coins from a Player"</td>
+        </tr>
+        <tr>
+            <td>Queen</td>
+            <td>-</td>
+            <td>Block Assassination</td>
+        </tr>
+        <tr>
+            <td>Jack</td>
+            <td>Take 3 Coins from Bank</td>
+            <td>Block "Take 2 Coins from Bank"</td>
+        </tr>
+        <tr>
+            <td>Four</td>
+            <td>Exchange Cards</td>
+            <td>Block "Steal 2 Coins from a Player"</td>
+        </tr>
+    </table>
+</body>
+</html>
