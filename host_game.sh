@@ -1,5 +1,10 @@
 #!/data/data/com.termux/files/usr/bin/bash
 
+SCRIPT_PATH="$(readlink -f "$0")"
+SCRIPT_DIR="$(dirname "$SCRIPT_PATH")"
+cd "$SCRIPT_DIR"
+echo "Running from: $(pwd)"
+
 PORT="${1:-8000}"
 
 HOST_IP=$(
@@ -10,7 +15,6 @@ HOST_IP=$(
   grep -v '^100\.' |
   head -n1
 )
-URL="http://${HOST_IP}:${PORT}/"
 
 if [ -z "$HOST_IP" ]; then
     echo "Could not determine hotspot IP from ifconfig output."
@@ -18,9 +22,18 @@ if [ -z "$HOST_IP" ]; then
     exit 1
 fi
 
+URL="http://${HOST_IP}:${PORT}/"
+MSG="Join URL: $URL"
+
+# Create a border of '=' the same width as the message
+BORDER=$(printf '=%.0s' $(seq 1 ${#MSG}))
+
 echo
 echo "Game server starting"
-echo "Join at: $URL"
+echo
+echo "$BORDER"
+echo "$MSG"
+echo "$BORDER"
 echo
 qrencode -t ansiutf8 "$URL"
 echo
